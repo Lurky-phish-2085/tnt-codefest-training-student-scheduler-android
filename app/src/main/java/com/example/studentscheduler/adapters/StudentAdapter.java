@@ -49,7 +49,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentI
         notifyDataSetChanged();
     }
 
-    class StudentItemHolder extends RecyclerView.ViewHolder {
+    class StudentItemHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView textViewName;
 
@@ -58,23 +58,19 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentI
 
             textViewName = itemView.findViewById(R.id.student_name);
 
-            itemView.findViewById(R.id.view_student_btn).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    int pos = getAdapterPosition();
-                    mainInterface.onClickButton(pos, "view");
-                }
-            });
+            itemView.findViewById(R.id.view_student_btn).setOnClickListener(this);
+            itemView.findViewById(R.id.delete_student_btn).setOnClickListener(this);
+        }
 
-            itemView.findViewById(R.id.delete_student_btn).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    int pos = getAdapterPosition();
-                    mainInterface.onClickButton(pos, "delete");
-                }
-            });
-
-
+        @Override
+        public void onClick(View view) {
+            int pos = getAdapterPosition();
+            if (view.getId() == R.id.view_student_btn) {
+                mainInterface.onClickButton(pos, "view");
+            }
+            if (view.getId() == R.id.delete_student_btn) {
+                mainInterface.onClickButton(pos, "delete");
+            }
         }
     }
 
