@@ -27,9 +27,10 @@
         android:id="@+id/view_student_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/baseline_search_24"
+        android:src="@drawable/baseline_remove_red_eye_24"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:contentDescription="View"/>
 
     <ImageButton
         android:id="@+id/edit_student_btn"
@@ -38,8 +39,7 @@
         android:src="@drawable/baseline_edit_24"
         android:layout_toLeftOf="@+id/view_student_btn"
         android:layout_alignTop="@+id/view_student_btn"
-
-        />
+        android:contentDescription="Edit" />
 
     <ImageButton
         android:id="@+id/delete_student_btn"
@@ -47,9 +47,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/baseline_delete_24"
         android:layout_toLeftOf="@+id/edit_student_btn"
-        android:layout_alignTop="@+id/edit_student_btn"/>
-
-
-
+        android:layout_alignTop="@+id/edit_student_btn"
+        android:contentDescription="Delete"/>
 
 </RelativeLayout>
