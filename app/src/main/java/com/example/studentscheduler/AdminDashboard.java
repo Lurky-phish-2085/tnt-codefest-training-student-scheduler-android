@@ -49,6 +49,15 @@ public class AdminDashboard extends AppCompatActivity implements MainInterface {
     public void onClickButton(int position, String mode) {
         int id = studentsList.get(position).getId();
 
+        if(mode == "add"){
+            Intent intent = new Intent(this, InputActivity.class);
+            String studentName = studentsList.get(position).getName();
+            int studentID = studentsList.get(position).getId();
+            intent.putExtra("ID", studentID);
+            intent.putExtra("NAME", studentName);
+            startActivity(intent);
+        }
+
         if(mode == "view"){
             Intent intent = new Intent(this, StudentDashboard.class);
             intent.putExtra("ID", id);

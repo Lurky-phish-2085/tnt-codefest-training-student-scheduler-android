@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminLoginActivity">
+    tools:context=".AdminLoginActivity"
+    android:background="@color/grey_700">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,17 +18,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Admin Login"
-                android:textSize="20dp"
+                android:textSize="25dp"
+                android:textColor="@color/white"
                 android:layout_margin="20dp"
                 />
 
             <EditText
                 android:id="@+id/admin_password_et"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:ems="10"
                 android:textAlignment="center"
-                android:hint="12345678"
+                android:hint="********"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey_200"
+                android:background="@drawable/main_card"
+                android:layout_marginBottom="10dp"
                 android:inputType="textPassword" />
 
 
@@ -35,8 +41,15 @@
                 android:id="@+id/adminLogin"
                 android:onClick="switchToAdminDashboard"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="Login" />
+            <Button
+                android:id="@+id/backToHomepage"
+                android:onClick="switchToStudentDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:text="Go Back" />
 
 
 

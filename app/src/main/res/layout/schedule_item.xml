@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:gravity="center|start"
-    android:padding="10dp"
-    android:background="@color/white">
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|start"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/main_card">
+
 
     <TextView
         android:id="@+id/subject_tv"
@@ -12,6 +19,7 @@
         android:layout_height="wrap_content"
         android:text="Computer Programming"
         android:textSize="20dp"
+        android:textColor="@color/white"
         />
 
 
@@ -19,9 +27,9 @@
         android:id="@+id/time_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="12:00PM"
+        android:text="12:00 PM"
         android:textSize="20dp"
-        android:layout_below="@id/subject_tv"
+        android:textColor="@color/white"
         />
 
     <TextView
@@ -30,7 +38,9 @@
         android:layout_height="wrap_content"
         android:text="Monday"
         android:textSize="20dp"
-        android:layout_below="@id/time_tv"
+        android:textColor="@color/white"
         />
 
+
+    </LinearLayout>
 </RelativeLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_700"
+    android:padding="10dp">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Creating A Schedule For"
+            android:gravity="center"
+            android:textSize="15dp"/>
+        <TextView
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Juan DeLa Cruz"
+            android:gravity="center"
+            android:textSize="25dp"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Class Subject:"
+            android:textSize="15dp"/>
+        <EditText
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/main_card"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey_700"
+            android:hint="ex. Computer Programming"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Choose Day Of the Week:"
+            android:textSize="15dp"/>
+        <Spinner
+            android:layout_marginBottom="20dp"
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/main_card"
+            android:textColor="@color/white"
+            android:spinnerMode="dropdown"
+            android:entries="@array/day_of_the_week_array"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Choose Time:"
+            android:textSize="15dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Spinner
+                android:id="@+id/spinnerHour"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:background="@drawable/main_card"
+                android:textColor="@color/white"
+                android:spinnerMode="dropdown"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerHourMinute"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:background="@drawable/main_card"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"
+                android:spinnerMode="dropdown"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerHourAMPM"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:background="@drawable/main_card"
+                android:textColor="@color/white"
+                android:spinnerMode="dropdown"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Add Schedule"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Cancel"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

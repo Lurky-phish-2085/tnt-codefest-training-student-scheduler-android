@@ -60,6 +60,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentI
 
             itemView.findViewById(R.id.view_student_btn).setOnClickListener(this);
             itemView.findViewById(R.id.delete_student_btn).setOnClickListener(this);
+            itemView.findViewById(R.id.add_student_btn).setOnClickListener(this);
         }
 
         @Override
@@ -70,6 +71,9 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentI
             }
             if (view.getId() == R.id.delete_student_btn) {
                 mainInterface.onClickButton(pos, "delete");
+            }
+            if (view.getId() == R.id.add_student_btn) {
+                mainInterface.onClickButton(pos, "add");
             }
         }
     }

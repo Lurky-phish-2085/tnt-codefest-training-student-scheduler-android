@@ -2,15 +2,26 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="120dp"
     android:gravity="center"
-    android:padding="10dp"
-    android:background="@color/white">
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:background="@drawable/main_card">
+
+
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="match_parent"
+        android:tint="@color/white"
+        android:scaleType="fitCenter"
         app:srcCompat="@drawable/ic_android_black_24dp" />
 
     <TextView
@@ -20,34 +31,63 @@
         android:text="Junior Dela Rosa"
         android:textSize="20dp"
         android:layout_toRightOf="@id/imageView"
+        android:layout_alignTop="@+id/imageView"
+        android:textColor="@color/white"
         />
 
 
-    <ImageButton
-        android:id="@+id/view_student_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_remove_red_eye_24"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:contentDescription="View"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true">
 
-    <ImageButton
-        android:id="@+id/edit_student_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_edit_24"
-        android:layout_toLeftOf="@+id/view_student_btn"
-        android:layout_alignTop="@+id/view_student_btn"
-        android:contentDescription="Edit" />
+            <ImageButton
+                android:id="@+id/add_student_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="Add"
+                android:backgroundTint="@color/purple_500"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/baseline_add_24" />
 
-    <ImageButton
-        android:id="@+id/delete_student_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_delete_24"
-        android:layout_toLeftOf="@+id/edit_student_btn"
-        android:layout_alignTop="@+id/edit_student_btn"
-        android:contentDescription="Delete"/>
+            <ImageButton
+                android:id="@+id/view_student_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_remove_red_eye_24"
+                android:contentDescription="View"
+                android:backgroundTint="@color/purple_500"
+                android:tint="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/edit_student_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_edit_24"
+                android:contentDescription="Edit"
+                android:backgroundTint="@color/purple_500"
+                android:tint="@color/white"/>
+
+            <ImageButton
+                android:id="@+id/delete_student_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_delete_24"
+                android:contentDescription="Delete"
+                android:backgroundTint="@color/purple_500"
+                android:tint="@color/white"/>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

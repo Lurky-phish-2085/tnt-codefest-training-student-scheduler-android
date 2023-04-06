@@ -4,29 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StudentDashboard">
+    tools:context=".StudentDashboard"
+    android:background="@color/grey_700">
 
     <TextView
         android:id="@+id/admin_dashboard_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:text="Admin Dashboard"/>
+        android:textSize="25dp"
+        android:text="Admin Dashboard"
+        android:textColor="@color/white"
+        android:layout_marginVertical="10dp"
+        android:gravity="center"/>
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/admin_dashboard_title">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/student_recycler_view_for_admin"
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/student_item" />
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:background="@drawable/main_card">
+
+                <Button
+                    android:onClick="switchToStudentInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cornerRadius="50dp"
+                    android:text="ADD New STUDENT"/>
+
+                <Button
+                    android:onClick="switchToHomepage"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cornerRadius="50dp"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:text="Logout"/>
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Student List:"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="15dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/student_recycler_view_for_admin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/student_item" />
+
+
+        </LinearLayout>
+
+
 
 
     </ScrollView>
-
-
 
 
 
