@@ -54,9 +54,9 @@ public abstract class MainDatabase extends RoomDatabase {
             studentDao.insert(Jet);
             studentDao.insert(Carlo);
             studentDao.insert(Justine);
-            scheduleDao.insert(new Schedule(1, 1600, "Data Science", 7));
-            scheduleDao.insert(new Schedule(2, 1700, "Computer Programming", 2));
-            scheduleDao.insert(new Schedule(3, 1700, "Computer Programming", 2));
+            scheduleDao.insert(new Schedule(1, 1600, "Data Science", "Saturday"));
+            scheduleDao.insert(new Schedule(2, 1700, "Computer Programming", "Tuesday"));
+            scheduleDao.insert(new Schedule(3, 1700, "Computer Programming", "Tuesday"));
             studentDao.delete(Carlo);
             return null;
         }

@@ -15,25 +15,25 @@ public class Schedule {
 
     private int time;
 
-    private int dayOfTheWeek;
+    private String dayOfTheWeek;
 
     private String subject;
 
     public Schedule() {
     }
 
-    public Schedule(int studentId, int time, String subject, int dayOfTheWeek) {
+    public Schedule(int studentId, int time, String subject, String dayOfTheWeek) {
         StudentId = studentId;
         this.time = time;
         this.subject = subject;
         this.dayOfTheWeek = dayOfTheWeek;
     }
 
-    public int getDayOfTheWeek() {
+    public String getDayOfTheWeek() {
         return dayOfTheWeek;
     }
 
-    public void setDayOfTheWeek(int dayOfTheWeek) {
+    public void setDayOfTheWeek(String dayOfTheWeek) {
         this.dayOfTheWeek = dayOfTheWeek;
     }
 
