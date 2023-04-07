@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.studentscheduler.Database.Schedule;
 import com.example.studentscheduler.Database.Student;
 import com.example.studentscheduler.Interface.MainInterface;
 import com.example.studentscheduler.adapters.StudentAdapter;
@@ -64,13 +63,17 @@ public class AdminDashboard extends AppCompatActivity implements MainInterface {
             startActivity(intent);
         }
         if(mode == "delete"){
-            System.out.println("Trigger");
+//            System.out.println("Trigger");
             Student toDelete = mainViewModel.getStudentList().getValue().get(position);
-            System.out.println(toDelete.getName());
-            System.out.println(toDelete.getPassword());
-            mainViewModel.delete(toDelete);
+//            System.out.println(toDelete.getName());
+//            System.out.println(toDelete.getPassword());
+            confirmDeletion(toDelete);
+//            mainViewModel.delete(toDelete);
         }
+    }
 
-
+    private void confirmDeletion(Student student) {
+        DeletionConfirmationModal confirmationModal = new DeletionConfirmationModal(student, mainViewModel);
+        confirmationModal.show(getSupportFragmentManager(), "Deletion confirmation modal");
     }
 }
