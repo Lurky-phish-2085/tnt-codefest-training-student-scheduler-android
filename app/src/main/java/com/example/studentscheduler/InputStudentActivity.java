@@ -16,10 +16,6 @@ public class InputStudentActivity extends AppCompatActivity {
 
     }
 
-    public void switchToStudentInput(View view) {
-        Intent intent = new Intent(this, InputStudentActivity.class);
-        startActivity(intent);
-    }
 
     public void switchToHomepage(View view) {
         Intent intent = new Intent(this, MainActivity.class);

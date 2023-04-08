@@ -58,6 +58,8 @@ public class MainViewModel extends AndroidViewModel {
         return studentList;
     }
 
+
+
     public LiveData<List<Schedule>> getScheduleList(int studentID) {
         scheduleList = repository.getScheduleList(studentID);
         return scheduleList;

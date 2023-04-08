@@ -1,6 +1,8 @@
 package com.example.studentscheduler;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,8 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.studentscheduler.Database.Student;
+import com.example.studentscheduler.Fragments.InputStudentFragment;
 import com.example.studentscheduler.Interface.MainInterface;
 import com.example.studentscheduler.adapters.StudentAdapter;
 
@@ -76,4 +80,22 @@ public class AdminDashboard extends AppCompatActivity implements MainInterface {
         DeletionConfirmationModal confirmationModal = new DeletionConfirmationModal(student, mainViewModel);
         confirmationModal.show(getSupportFragmentManager(), "Deletion confirmation modal");
     }
+
+    public void switchToStudentInput(View view) {
+        System.out.println("Working!!@");
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.input_student_view, new InputStudentFragment());
+        fragmentTransaction.commit();
+        //Switch To Activity Fragment
+//        Intent intent = new Intent(this, InputStudentActivity.class);
+//        startActivity(intent);
+    }
+
+    public void switchToHomepage(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+
 }

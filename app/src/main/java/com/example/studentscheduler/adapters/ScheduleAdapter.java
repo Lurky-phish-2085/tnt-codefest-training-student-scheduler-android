@@ -30,7 +30,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
         Schedule currentItem = scheduleList.get(position);
         holder.textViewSubject.setText(currentItem.getSubject());
         holder.textViewTime.setText(String.valueOf(currentItem.getTime()));
-        holder.textViewWeekday.setText(String.valueOf(currentItem.getDayOfTheWeek()));
+        holder.textViewWeekday.setText(currentItem.getDayOfTheWeek());
     }
 
     @Override
