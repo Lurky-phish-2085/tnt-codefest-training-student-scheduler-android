@@ -4,6 +4,8 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
+import java.util.Date;
+
 @Entity(tableName = "schedule_table", foreignKeys = {@ForeignKey(entity = Student.class, parentColumns = "id",
         childColumns = "StudentId", onDelete = ForeignKey.CASCADE)})
 public class Schedule {
@@ -15,25 +17,25 @@ public class Schedule {
 
     private int time;
 
-    private String dayOfTheWeek;
+    private Date dayOfTheWeek;
 
     private String subject;
 
     public Schedule() {
     }
 
-    public Schedule(int studentId, int time, String subject, String dayOfTheWeek) {
+    public Schedule(int studentId, int time, String subject, Date dayOfTheWeek) {
         StudentId = studentId;
         this.time = time;
         this.subject = subject;
         this.dayOfTheWeek = dayOfTheWeek;
     }
 
-    public String getDayOfTheWeek() {
+    public Date getDayOfTheWeek() {
         return dayOfTheWeek;
     }
 
-    public void setDayOfTheWeek(String dayOfTheWeek) {
+    public void setDayOfTheWeek(Date dayOfTheWeek) {
         this.dayOfTheWeek = dayOfTheWeek;
     }
 
